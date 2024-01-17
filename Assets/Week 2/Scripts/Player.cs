@@ -18,4 +18,8 @@ public class Player : MonoBehaviour
         Vector2 force = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")) * speed * Time.deltaTime;
         rigidbody.AddForce(force); 
     }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        Debug.Log("Player hit something");
+    }
 }
