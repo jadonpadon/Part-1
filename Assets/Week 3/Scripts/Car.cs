@@ -8,9 +8,9 @@ public class Car : MonoBehaviour
     Rigidbody2D rigidbody;
     float acceleration;
     float steering;
-    public float forwardSpeed = 300;
-    public float steeringSpeed = 300;
-    public float maxSpeed = 300;
+    public float forwardSpeed = 500;
+    public float steeringSpeed = 150;
+    public float maxSpeed = 500;
     // Start is called before the first frame update
     void Start()
     {
@@ -34,5 +34,7 @@ public class Car : MonoBehaviour
         }
         
     }
+
+    
 }
 
