@@ -21,7 +21,8 @@ public class Spaceship : MonoBehaviour
 
     private void FixedUpdate()
     {
-        Vector2 force = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")) * speed * Time.deltaTime;
-        rigidbody.AddForce(force);
+        float moveHor = Input.GetAxis("Horizontal");
+        float moveVer = Input.GetAxis("Vertical");
+        transform.Translate(moveHor * speed * Time.deltaTime, moveVer * speed * Time.deltaTime, 0);
     }
 }
